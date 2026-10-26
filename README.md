@@ -9,9 +9,9 @@ features in the coordinate system of the source image.
 ## Why
 
 Every public road in Russia has a technical passport: an inventory of its
-geometry and equipment, kept up to date by the road owner. A central part of
-it is the plan of the road as it actually exists, with carriageway edges,
-lane lines and other markings drawn in a GIS.
+geometry and equipment. A central part of it is the plan of the road as it
+actually exists, with carriageway edges, lane lines and other markings drawn
+in a GIS.
 
 Today the source for that plan is usually an aerial orthophoto taken by a
 drone, and the drawing is still done by hand: an engineer traces every
