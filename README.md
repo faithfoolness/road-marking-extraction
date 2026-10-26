@@ -4,10 +4,30 @@ Extracts road markings from aerial orthophotos (GeoTIFF) and turns them into
 GIS-ready vector lines: solid and dashed markings as separate, measured
 features in the coordinate system of the source image.
 
-Built for road survey work, where markings have to be inventoried along
-hundreds of kilometres of highway and digitising them by hand takes days.
-
 ![Web interface](docs/web-ui.jpg)
+
+## Why
+
+Every public road in Russia has a technical passport: an inventory of its
+geometry and equipment, kept up to date by the road owner. A central part of
+it is the plan of the road as it actually exists, with carriageway edges,
+lane lines and other markings drawn in a GIS.
+
+Today the source for that plan is usually an aerial orthophoto taken by a
+drone, and the drawing is still done by hand: an engineer traces every
+edge line and every dash on the screen, image after image, along hundreds of
+kilometres of highway. It is slow, repetitive work, and the result depends on
+who did the tracing.
+
+The same approach can potentially be used with lidar surveys (mobile or
+airborne laser scanning) as well, provided the point cloud is rasterised into
+a GeoTIFF with natural colour grading, so that the paint looks the way it does
+on a photo.
+
+I work as a GIS engineer and do this kind of work myself, so I wrote this tool
+to take over the repetitive part: it draws the existing markings automatically,
+in the coordinate system of the survey, and leaves the engineer to check and
+correct the result instead of drawing everything from scratch.
 
 ## What it does
 
