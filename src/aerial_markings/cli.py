@@ -1,9 +1,11 @@
 """Command line interface.
 
-    aerial-markings extract photo.tif -o results/
-    aerial-markings extract photo.tif --crs EPSG:32637 --no-vehicles
-    aerial-markings serve --port 8000
-    aerial-markings demo
+    road-markings extract photo.tif -o results/
+    road-markings extract photo.tif --crs EPSG:32637 --no-vehicles
+    road-markings serve --port 8000
+    road-markings demo
+
+(`aerial-markings` is kept as an alias of the same command.)
 """
 
 from __future__ import annotations
@@ -56,7 +58,7 @@ def _demo(args) -> None:
 
 
 def main(argv=None) -> None:
-    ap = argparse.ArgumentParser(prog="aerial-markings",
+    ap = argparse.ArgumentParser(prog="road-markings",
                                  description="Extract road markings from aerial orthophotos.")
     ap.add_argument("-v", "--verbose", action="store_true")
     sub = ap.add_subparsers(dest="cmd", required=True)

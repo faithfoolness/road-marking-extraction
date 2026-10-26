@@ -1,4 +1,4 @@
-# Aerial Road Markings
+# Road Marking Extraction
 
 Extracts road markings from aerial orthophotos (GeoTIFF) and turns them into
 GIS-ready vector lines: solid and dashed markings as separate, measured
@@ -70,8 +70,8 @@ All thresholds are set in metres (`src/aerial_markings/config.py`) and converted
 ## Quick start
 
 ```bash
-git clone https://github.com/faithfoolness/AerialPhotographyProcessing.git
-cd AerialPhotographyProcessing
+git clone https://github.com/faithfoolness/road-marking-extraction.git
+cd road-marking-extraction
 python -m venv .venv
 .venv\Scripts\activate             # Windows  (Linux/macOS: source .venv/bin/activate)
 pip install -e .[vehicles]         # without [vehicles] the YOLO step is skipped
@@ -80,8 +80,8 @@ pip install -e .[vehicles]         # without [vehicles] the YOLO step is skipped
 Try it on a generated test image:
 
 ```bash
-aerial-markings demo -o data/synthetic_road.tif
-aerial-markings extract data/synthetic_road.tif -o results/
+road-markings demo -o data/synthetic_road.tif
+road-markings extract data/synthetic_road.tif -o results/
 ```
 
 ```
@@ -94,14 +94,14 @@ synthetic_road.tif: 6 lines in 5.1 s -> results
 Web interface:
 
 ```bash
-aerial-markings serve            # then open http://127.0.0.1:8000
+road-markings serve            # then open http://127.0.0.1:8000
 ```
 
 Your own imagery:
 
 ```bash
-aerial-markings extract photos/*.tif -o results/    # results/<image>/... plus results/all_markings.*
-aerial-markings extract tile.tif --crs EPSG:32637   # if the image carries no CRS
+road-markings extract photos/*.tif -o results/    # results/<image>/... plus results/all_markings.*
+road-markings extract tile.tif --crs EPSG:32637   # if the image carries no CRS
 ```
 
 In the web interface, drop files or a whole folder (or pick them with "Choose files" / "Choose folder"); `.tfw` and `.prj` are matched to images by file name. Images are processed one after another, and a failure in one does not stop the rest.

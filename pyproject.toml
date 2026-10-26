@@ -3,7 +3,7 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "aerial-markings"
+name = "road-marking-extraction"
 version = "1.0.0"
 description = "Extract road markings from aerial orthophotos into GIS vector layers"
 readme = "README.md"
@@ -31,6 +31,7 @@ dev = ["pytest>=8", "httpx>=0.27"]
 
 [project.scripts]
 aerial-markings = "aerial_markings.cli:main"
+road-markings = "aerial_markings.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
