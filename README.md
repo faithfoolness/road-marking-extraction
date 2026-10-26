@@ -24,10 +24,12 @@ airborne laser scanning) as well, provided the point cloud is rasterised into
 a GeoTIFF with natural colour grading, so that the paint looks the way it does
 on a photo.
 
-I work as a GIS engineer and do this kind of work myself, so I wrote this tool
-to take over the repetitive part: it draws the existing markings automatically,
-in the coordinate system of the survey, and leaves the engineer to check and
-correct the result instead of drawing everything from scratch.
+I work as a GIS engineer, and my colleagues do this tracing as part of road
+passport work. Watching how much of their time it took, I wanted to help them
+speed it up, so I wrote this tool to take over the repetitive part: it draws
+the existing markings automatically, in the coordinate system of the survey,
+and leaves the engineer to check and correct the result instead of drawing
+everything from scratch.
 
 ## What it does
 
